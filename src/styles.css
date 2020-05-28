@@ -1,0 +1,11 @@
+.dropZone {
+	border: 1px solid black;
+	padding: 20px;
+	border-radius: 15px;
+}
+
+.fileList {
+	padding: 20px;
+	list-style-type: none;
+	display: flex;
+}
