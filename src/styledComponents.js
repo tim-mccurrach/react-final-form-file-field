@@ -21,6 +21,8 @@ export const FileItemLi = styled.li`
 	text-align: center;
 	display: inline-block;
 	vertical-align: top;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
 
 	div {
 		margin: 0;
