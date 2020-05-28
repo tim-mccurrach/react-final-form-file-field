@@ -20,6 +20,7 @@ export const FileItemLi = styled.li`
 	position: relative;
 	text-align: center;
 	display: inline-block;
+	vertical-align: top;
 
 	div {
 		margin: 0;

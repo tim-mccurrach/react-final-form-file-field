@@ -7,17 +7,14 @@ const defaultConfig = {
 	multiple: true,
 };
 
-const useFilesField = function (
-	name,
-	onFileLoad,
-	config = {},
-	fieldConfig = {}
-) {
+const useFilesField = function (name, onFileLoad, config = {}) {
+	const { multiple, accepts, ...fieldConfig } = config;
 	const inputRef = useRef(null);
 	const { meta, fields } = useFieldArray(name, {
 		getItemName: (v) => v,
 		...fieldConfig,
 	});
+
 	const onChange = ({ target }) => {
 		const nameList = meta.data.NAME_LIST;
 		Array.from(target.files).forEach((file) => {
@@ -46,11 +43,12 @@ const useFilesField = function (
 	const fileInputProps = {
 		ref: inputRef,
 		hidden: true,
-		multiple: config.multiple,
-		accepts: config.accepts,
+		multiple,
+		accepts,
 		type: "file",
 		onChange,
 	};
+
 	return {
 		inputProps: fileInputProps,
 		files: fields,

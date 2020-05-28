@@ -12,6 +12,7 @@ export default {
 export const FileItemStory = () => (
 	<FileItem
 		fileName={text("File Name", "Example")}
+		downloadFile={() => {}}
 		progress={number("progress", 50, {
 			range: true,
 			min: 0,
@@ -19,6 +20,6 @@ export const FileItemStory = () => (
 			step: 1,
 		})}
 		mimeType={text("MIME", "video/something")}
-		downloadCompleted={boolean("uploaded", true)}
+		inProgress={boolean("uploaded", true)}
 	/>
 );
