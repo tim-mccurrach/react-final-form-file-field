@@ -81,10 +81,10 @@ FileItem.propTypes = forbidExtraProps({
 	fileName: PropTypes.string.isRequired,
 	progress: PropTypes.number.isRequired,
 	removeFile: PropTypes.func.isRequired,
-	dragProps: PropTypes.object.isRequired,
 
 	//optional
 	downloadFile: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
 	inProgress: PropTypes.bool,
 	mimeType: PropTypes.string,
+	dragProps: PropTypes.object,
 });

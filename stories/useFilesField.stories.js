@@ -28,6 +28,10 @@ const Example = (props) => {
 						<FileItem
 							fileName={file.filename}
 							mimeType={file.mime}
+							downloadFile={() => {}}
+							removeFile={() => {
+								files.remove(file.filename);
+							}}
 						/>
 					);
 				})}
