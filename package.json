@@ -56,12 +56,12 @@
     "prettier": "^2.0.5",
     "react": "^16.13.1",
     "react-final-form": "^6.5.0",
-    "react-final-form-named-arrays": "^0.2.0"
+    "react-final-form-named-arrays": "^0.3.0"
   },
   "peerDependencies": {
     "final-form": "^4.15.0",
     "react-final-form": "^6.2.1",
-    "react-final-form-named-arrays": "^0.2.0",
+    "react-final-form-named-arrays": "^0.3.0",
     "react": "^16.8.0"
   }
 }
