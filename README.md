@@ -20,21 +20,21 @@ The `FilesField` registers a field array, and provides props to render your file
 
 ```
 <Form onSubmit={onSubmit} mutators={arrayMutators}>
-	{({ handleSubmit }) => (
-		<form onSubmit={handleSubmit}>
-			<FilesField name="files" onFileLoad={onFileLoad}>
-				{({ uploadFiles, files }) => (
-					<>
-						// render uploader
-						<button onClick={uploadFiles}>Upload Files</button>
+    {({ handleSubmit }) => (
+	<form onSubmit={handleSubmit}>
+	    <FilesField name="files" onFileLoad={onFileLoad}>
+		{({ uploadFiles, files }) => (
+		    <>
+			// render uploader
+			<button onClick={uploadFiles}>Upload Files</button>
 
-						//render files
-						{files.mapValues((file) => (<p>file</p>))}
-					</>
-				)}
-			</FilesField>
-		</form>
-	)}
+			//render files
+			{files.mapValues((file) => (<p>file</p>))}
+		    </>
+		)}
+	    </FilesField>
+	</form>
+    )}
 </Form>;
 ```
 
@@ -43,21 +43,21 @@ However you can also use the `useFilesField` hook to achieve just the same thing
 ```
 const MyFileUploader = ({fieldName, onFileLoad, config}) => {
     const { uploadFiles, inputProps, files } = useFilesField(
-		fieldName,
-		onFileAdd,
-		config
-	)
-	return(
-		<>
-			// this will be hidden
-			<input {...inputProps} />
+	fieldName,
+	onFileAdd,
+	config
+    )
+    return(
+	<>
+	    // this will be hidden
+	    <input {...inputProps} />
 
-			// render uploader
-			<button onClick={uploadFiles}>Upload Files</button>
+	    // render uploader
+	    <button onClick={uploadFiles}>Upload Files</button>
 
-			//render files
-			{files.mapValues((file) => (<p>file</p>))}
-		</>
-	)
+	    //render files
+	    {files.mapValues((file) => (<p>file</p>))}
+	</>
+   )
 }
 ```
