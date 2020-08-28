@@ -2,7 +2,7 @@ import React from "react";
 
 import useFilesField from "./useFilesField";
 
-const FileField = (props) => {
+const FilesField = (props) => {
 	const { name, onFileLoad, id, children, ...otherProps } = props;
 	const { uploadFiles, inputProps, files, meta } = useFilesField(
 		name,
@@ -22,4 +22,4 @@ const FileField = (props) => {
 	);
 };
 
-export default FileField;
+export default FilesField;

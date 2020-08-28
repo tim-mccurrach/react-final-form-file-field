@@ -1,5 +1,2 @@
-/*
-	mimetypes + tests
-	FileItem + tests
-	FileList + tests	
-*/
+export { default as FilesField } from "./FilesField";
+export { default as useFilesField } from "./useFilesField";
