@@ -1,6 +1,6 @@
 {
   "name": "react-final-form-file-field",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Easy add a file upload field to your final-form form.",
   "main": "dist/index.js",
   "scripts": {
@@ -33,6 +33,7 @@
     "airbnb-prop-types": "^2.15.0",
     "prop-types": "^15.7.2",
     "react-beautiful-dnd": "^13.0.0",
+    "react-final-form-named-arrays": "^0.3.0",
     "styled-components": "^5.1.1"
   },
   "devDependencies": {
@@ -58,8 +59,7 @@
     "prettier": "^2.0.5",
     "react": "^16.13.1",
     "react-dropzone": "^11.0.3",
-    "react-final-form": "^6.5.0",
-    "react-final-form-named-arrays": "^0.3.0"
+    "react-final-form": "^6.5.0"
   },
   "peerDependencies": {
     "final-form": "^4.15.0",
