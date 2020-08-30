@@ -15,7 +15,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _useFilesField2 = _interopRequireDefault(require("./useFilesField"));
 
-var FileField = function FileField(props) {
+var FilesField = function FilesField(props) {
   var name = props.name,
       onFileLoad = props.onFileLoad,
       id = props.id,
@@ -42,5 +42,5 @@ var FileField = function FileField(props) {
   }));
 };
 
-var _default = FileField;
+var _default = FilesField;
 exports["default"] = _default;
