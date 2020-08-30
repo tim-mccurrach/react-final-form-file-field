@@ -1,6 +1,6 @@
 {
   "name": "react-final-form-file-field",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Easy add a file upload field to your final-form form.",
   "main": "dist/index.js",
   "scripts": {
