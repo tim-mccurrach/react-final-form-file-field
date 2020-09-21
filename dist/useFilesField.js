@@ -46,12 +46,11 @@ var useFilesField = function useFilesField(name, onFileLoad) {
     var target = _ref.target;
     var nameList = meta.data.NAME_LIST;
     Array.from(target.files).forEach(function (file) {
-      var filename = file.name;
+      var filename = file.name; // add a verion number for repeated file names
 
-      if (nameList.includes(filename)) {
-        var count = nameList.reduce(function (n, val) {
-          return n + (val === file.name);
-        }, 0);
+      var count = (0, _utils.countDuplicates)(nameList, filename);
+
+      if (count) {
         filename = (0, _utils.addVersionToFilename)(filename, count);
       }
 

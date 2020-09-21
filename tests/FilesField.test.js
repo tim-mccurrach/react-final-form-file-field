@@ -9,7 +9,11 @@ describe("FilesField", () => {
 		const mockOnFileLoad = jest.fn();
 		const { container } = render(
 			<FormTemplate>
-				<FilesField name="files" onFileLoad={mockOnFileLoad} />
+				<FilesField
+					id="files"
+					name="files"
+					onFileLoad={mockOnFileLoad}
+				/>
 			</FormTemplate>
 		);
 	});
