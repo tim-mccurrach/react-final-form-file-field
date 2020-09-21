@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { useFieldArray } from "react-final-form-named-arrays";
 
-import { addVersionToFilename } from "./utils";
+import { addVersionToFilename, countDuplicates } from "./utils";
 
 const defaultConfig = {
 	multiple: true,
@@ -21,11 +21,9 @@ const useFilesField = function (name, onFileLoad, config = {}) {
 		const nameList = meta.data.NAME_LIST;
 		Array.from(target.files).forEach((file) => {
 			var filename = file.name;
-			if (nameList.includes(filename)) {
-				const count = nameList.reduce(
-					(n, val) => n + (val === file.name),
-					0
-				);
+			// add a verion number for repeated file names
+			const count = countDuplicates(nameList, filename);
+			if (duplicates) {
 				filename = addVersionToFilename(filename, count);
 			}
 			onFileLoad({
