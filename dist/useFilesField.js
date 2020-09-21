@@ -23,7 +23,9 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 var defaultConfig = {
   multiple: true
-};
+}; // rethink this, should I use defaultConfig as the default argument
+// how will this fit in with defaultProps with the component, what
+// is least confusing
 
 var useFilesField = function useFilesField(name, onFileLoad) {
   var config = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};

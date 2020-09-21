@@ -1,4 +1,4 @@
-import { addVersionToFilename } from "./utils";
+import { addVersionToFilename } from "../src/utils";
 
 describe("addVersionToFilename", () => {
 	test.each([

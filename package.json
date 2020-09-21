@@ -1,13 +1,14 @@
 {
   "name": "react-final-form-file-field",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Easy add a file upload field to your final-form form.",
   "main": "dist/index.js",
   "scripts": {
+    "prebuild": "rimraf dist",
     "test": "jest --coverage",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "lint": "eslint . --ignore-path .gitignore",
+    "lint": "eslint ./src --ignore-path .gitignore",
     "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|json)\"",
     "deploy-storybook": "storybook-to-ghpages",
     "build": "./node_modules/.bin/babel src --out-dir dist"
@@ -32,7 +33,6 @@
     "@fortawesome/react-fontawesome": "^0.1.9",
     "airbnb-prop-types": "^2.15.0",
     "prop-types": "^15.7.2",
-    "react-beautiful-dnd": "^13.0.0",
     "react-final-form-named-arrays": "^0.3.0",
     "styled-components": "^5.1.1"
   },
@@ -58,8 +58,10 @@
     "jest-axe": "^3.4.0",
     "prettier": "^2.0.5",
     "react": "^16.13.1",
+    "react-beautiful-dnd": "^13.0.0",
     "react-dropzone": "^11.0.3",
-    "react-final-form": "^6.5.0"
+    "react-final-form": "^6.5.0",
+    "rimraf": "^3.0.2"
   },
   "peerDependencies": {
     "final-form": "^4.15.0",

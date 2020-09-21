@@ -1,4 +1,4 @@
-import { getFileType } from "./mimeTypeMaps";
+import { getFileType } from "../src/mimeTypeMaps";
 
 describe("getFileType", () => {
 	test.each([

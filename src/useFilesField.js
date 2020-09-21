@@ -6,7 +6,9 @@ import { addVersionToFilename } from "./utils";
 const defaultConfig = {
 	multiple: true,
 };
-
+// rethink this, should I use defaultConfig as the default argument
+// how will this fit in with defaultProps with the component, what
+// is least confusing
 const useFilesField = function (name, onFileLoad, config = {}) {
 	const { multiple, accepts, ...fieldConfig } = config;
 	const inputRef = useRef(null);

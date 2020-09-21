@@ -13,6 +13,8 @@ var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/h
 
 var _react = _interopRequireDefault(require("react"));
 
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
 var _useFilesField2 = _interopRequireDefault(require("./useFilesField"));
 
 var FilesField = function FilesField(props) {
@@ -42,5 +44,11 @@ var FilesField = function FilesField(props) {
   }));
 };
 
+FilesField.propTypes = {
+  name: _propTypes["default"].string.isRequired,
+  id: _propTypes["default"].string.isRequired,
+  onFileLoad: _propTypes["default"].func,
+  children: _propTypes["default"].node
+};
 var _default = FilesField;
 exports["default"] = _default;

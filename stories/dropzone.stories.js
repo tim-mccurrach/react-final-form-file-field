@@ -5,7 +5,7 @@ import { Draggable, DragDropContext, Droppable } from "react-beautiful-dnd";
 
 import { FileItem } from "../src/FileItem";
 import FilesField from "../src/FilesField";
-import FormTemplate from "../src/FormTemplate";
+import FormTemplate from "../tests/FormTemplate";
 
 export default {
 	title: "Example using dropzone and react beautiful dnd",
@@ -17,7 +17,14 @@ const DraggableFileItem = (props) => (
 		index={props.index}
 		draggableId={props.fileName}
 	>
-		{(provided) => <FileItem dragProps={provided} {...props} />}
+		{(provided) => (
+			<FileItem
+				ref={provided.innerRef}
+				{...provided.draggableProps}
+				{...provided.dragHandleProps}
+				{...props}
+			/>
+		)}
 	</Draggable>
 );
 
