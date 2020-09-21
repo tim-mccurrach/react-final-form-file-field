@@ -17,7 +17,14 @@ const DraggableFileItem = (props) => (
 		index={props.index}
 		draggableId={props.fileName}
 	>
-		{(provided) => <FileItem dragProps={provided} {...props} />}
+		{(provided) => (
+			<FileItem
+				ref={provided.innerRef}
+				{...provided.draggableProps}
+				{...provided.dragHandleProps}
+				{...props}
+			/>
+		)}
 	</Draggable>
 );
 
