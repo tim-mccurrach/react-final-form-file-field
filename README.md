@@ -61,3 +61,22 @@ const MyFileUploader = ({fieldName, onFileLoad, config}) => {
    )
 }
 ```
+
+### API
+
+The API for `react-final-form-file-field` consists of 2 components (`FileItem` and `FilesField` and 1 hook (`useFilesField`).
+
+#### `FileItem`
+
+A component to represent a file. It selects the appropriate font-awesome icon based on the mime-type, and provides adds two buttons to delete and download the file.
+
+Props:
+
+-   fileName: (string) required.
+-   removeFile: (function) required. An event handler that is passed to the delete buttons `onClick`. It should remove the file from the field.
+-   downloadFile (string | function) optional. If `downloadFile` is a function, it will be called when the download file button is pressed. If `downloadFile` is a string, then the download button will be a link, and when clicked it will navigate to the value of `downloadFile`. If this prop is not supplied the download button will not be rendered.
+-   inProgress: (bool) optional. If `true`, a progress bar will be displayed underneath the file (designed to show upload progress). If `inProgress` is true, then the `progress` prop must also be supplied.
+-   `progress` : (number) optional. This should be a number between 0 and 100 representing the percentage to show on the progress bar.
+-   mimeType: (string) optional. `FileItem` will attempt to display the most appropriate icon based on this value. If absent it will display a 'standard' file icon.
+
+All other props will be passed to the `li` element that makes up `FileItem`.
