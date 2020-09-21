@@ -8,7 +8,7 @@ const FormTemplate = (props) => {
 
 	return (
 		<Form
-			onSubmit={props.onSubmit || (() => {})}
+			onSubmit={onSubmit || (() => {})}
 			mutators={arrayMutators}
 			render={({ handleSubmit }) => (
 				<form onSubmit={handleSubmit}>{props.children}</form>

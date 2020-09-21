@@ -2,7 +2,7 @@ import React from "react";
 import { render, fireEvent } from "@testing-library/react";
 import { axe } from "jest-axe";
 
-import { FileItem } from "./FileItem";
+import { FileItem } from "../src/FileItem";
 
 const removeFileMock = jest.fn();
 const props = {

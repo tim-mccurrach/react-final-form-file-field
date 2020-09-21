@@ -2,7 +2,7 @@ import React from "react";
 
 import { FileItem } from "../src/FileItem";
 import useFilesField from "../src/useFilesField";
-import FormTemplate from "../src/FormTemplate";
+import FormTemplate from "../tests/FormTemplate";
 
 export default {
 	title: "Example using hooks",

@@ -1,7 +1,7 @@
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
 
-import FilesField from "./FilesField";
+import FilesField from "../src/FilesField";
 import FormTemplate from "./FormTemplate";
 
 describe("FilesField", () => {

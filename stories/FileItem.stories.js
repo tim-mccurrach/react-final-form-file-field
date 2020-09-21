@@ -1,7 +1,7 @@
 import React from "react";
 import { withKnobs, text, boolean, number } from "@storybook/addon-knobs";
 
-import { FileItem } from "../src/FileItem";
+import { FileItem } from "../test/FileItem";
 
 export default {
 	title: "File Item",
