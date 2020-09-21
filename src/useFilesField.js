@@ -23,7 +23,7 @@ const useFilesField = function (name, onFileLoad, config = {}) {
 			var filename = file.name;
 			// add a verion number for repeated file names
 			const count = countDuplicates(nameList, filename);
-			if (duplicates) {
+			if (count) {
 				filename = addVersionToFilename(filename, count);
 			}
 			onFileLoad({
