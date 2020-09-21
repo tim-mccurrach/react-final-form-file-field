@@ -8,10 +8,10 @@
     "test": "jest --coverage",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "lint": "eslint . --ignore-path .gitignore",
+    "lint": "eslint ./src --ignore-path .gitignore",
     "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|json)\"",
     "deploy-storybook": "storybook-to-ghpages",
-    "build": "./node_modules/.bin/babel src --out-dir dist --ignore '**/*.test.js'"
+    "build": "./node_modules/.bin/babel src --out-dir dist"
   },
   "repository": {
     "type": "git",

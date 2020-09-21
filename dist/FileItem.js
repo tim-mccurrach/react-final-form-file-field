@@ -30,39 +30,39 @@ var FileItem = /*#__PURE__*/_react["default"].forwardRef(function (props, ref) {
       inProgress = props.inProgress,
       progress = props.progress,
       mimeType = props.mimeType,
-      dragProps = props.dragProps,
-      otherProps = (0, _objectWithoutProperties2["default"])(props, ["fileName", "removeFile", "downloadFile", "inProgress", "progress", "mimeType", "dragProps"]);
-  var fileType = (0, _mimeTypeMaps.getFileType)(props.mimeType);
+      otherProps = (0, _objectWithoutProperties2["default"])(props, ["fileName", "removeFile", "downloadFile", "inProgress", "progress", "mimeType"]);
+  var fileType = (0, _mimeTypeMaps.getFileType)(mimeType);
   var icon = _mimeTypeMaps.fileTypeToFaIcon[fileType];
   return /*#__PURE__*/_react["default"].createElement(_styledComponents.FileItemLi, (0, _extends2["default"])({
     ref: ref
   }, otherProps), /*#__PURE__*/_react["default"].createElement(_styledComponents.StyledFaIcon, {
     icon: icon,
     iconColor: fileType
-  }), !props.inProgress && typeof props.downloadFile === "string" && /*#__PURE__*/_react["default"].createElement(_styledComponents.DownloadButton, {
+  }), !inProgress && typeof downloadFile === "string" && /*#__PURE__*/_react["default"].createElement(_styledComponents.DownloadButton, {
     as: "a",
-    href: props.downloadFile,
+    href: downloadFile,
     "aria-label": "Download File"
   }, /*#__PURE__*/_react["default"].createElement(_reactFontawesome.FontAwesomeIcon, {
     icon: _freeSolidSvgIcons.faArrowAltCircleDown
-  })), !props.inProgress && typeof props.downloadFile === "function" && /*#__PURE__*/_react["default"].createElement(_styledComponents.DownloadButton, {
-    onClick: props.downloadFile,
+  })), !inProgress && typeof downloadFile === "function" && /*#__PURE__*/_react["default"].createElement(_styledComponents.DownloadButton, {
+    onClick: downloadFile,
     "aria-label": "Download File"
   }, /*#__PURE__*/_react["default"].createElement(_reactFontawesome.FontAwesomeIcon, {
     icon: _freeSolidSvgIcons.faArrowAltCircleDown
   })), /*#__PURE__*/_react["default"].createElement(_styledComponents.DeleteButton, {
-    onClick: props.removeFile,
+    onClick: removeFile,
     "aria-label": "Remove File"
   }, /*#__PURE__*/_react["default"].createElement(_reactFontawesome.FontAwesomeIcon, {
     icon: _freeSolidSvgIcons.faTrashAlt
-  })), /*#__PURE__*/_react["default"].createElement("div", null, props.fileName), props.inProgress && /*#__PURE__*/_react["default"].createElement("progress", {
+  })), /*#__PURE__*/_react["default"].createElement("div", null, fileName), inProgress && /*#__PURE__*/_react["default"].createElement("progress", {
     role: "progressbar",
-    value: props.progress,
+    value: progress,
     max: 100
   }));
 });
 
 exports.FileItem = FileItem;
+FileItem.displayName = "FileItem";
 FileItem.propTypes = {
   // required
   fileName: _propTypes["default"].string.isRequired,

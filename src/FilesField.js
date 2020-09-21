@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import useFilesField from "./useFilesField";
 
@@ -20,6 +21,13 @@ const FilesField = (props) => {
 			{children && children({ uploadFiles, files, meta, inputId: id })}
 		</>
 	);
+};
+
+FilesField.propTypes = {
+	name: PropTypes.string.isRequired,
+	id: PropTypes.string.isRequired,
+	onFileLoad: PropTypes.func,
+	children: PropTypes.node,
 };
 
 export default FilesField;

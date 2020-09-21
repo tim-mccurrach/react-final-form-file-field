@@ -24,45 +24,46 @@ export const FileItem = React.forwardRef((props, ref) => {
 		inProgress,
 		progress,
 		mimeType,
-		dragProps,
 		...otherProps
 	} = props;
-	const fileType = getFileType(props.mimeType);
+	const fileType = getFileType(mimeType);
 	const icon = fileTypeToFaIcon[fileType];
 	return (
 		<FileItemLi ref={ref} {...otherProps}>
 			<StyledFaIcon icon={icon} iconColor={fileType} />
-			{!props.inProgress && typeof props.downloadFile === "string" && (
+			{!inProgress && typeof downloadFile === "string" && (
 				<DownloadButton
 					as="a"
-					href={props.downloadFile}
+					href={downloadFile}
 					aria-label="Download File"
 				>
 					<FontAwesomeIcon icon={faArrowAltCircleDown} />
 				</DownloadButton>
 			)}
-			{!props.inProgress && typeof props.downloadFile === "function" && (
+			{!inProgress && typeof downloadFile === "function" && (
 				<DownloadButton
-					onClick={props.downloadFile}
+					onClick={downloadFile}
 					aria-label="Download File"
 				>
 					<FontAwesomeIcon icon={faArrowAltCircleDown} />
 				</DownloadButton>
 			)}
-			<DeleteButton onClick={props.removeFile} aria-label="Remove File">
+			<DeleteButton onClick={removeFile} aria-label="Remove File">
 				<FontAwesomeIcon icon={faTrashAlt} />
 			</DeleteButton>
-			<div>{props.fileName}</div>
-			{props.inProgress && (
+			<div>{fileName}</div>
+			{inProgress && (
 				<progress
 					role="progressbar"
-					value={props.progress}
+					value={progress}
 					max={100}
 				></progress>
 			)}
 		</FileItemLi>
 	);
 });
+
+FileItem.displayName = "FileItem";
 
 FileItem.propTypes = {
 	// required
