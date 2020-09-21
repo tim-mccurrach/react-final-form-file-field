@@ -111,7 +111,7 @@ describe("FileItem", () => {
     expect(container).toMatchInlineSnapshot(`
       <div>
         <li
-          class="sc-AxjAm lovcQI"
+          class="sc-AxjAm eQxWaQ"
         >
           <svg
             aria-hidden="true"
